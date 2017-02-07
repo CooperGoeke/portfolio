@@ -3,8 +3,24 @@
 	&.active_page
 		#gray_corner_left
 			left: 0
+			+media(1000px)
+				left: -70px
+			+media(700px)
+				left: -200px
+			+media(480px)
+				left: -250px
 		#gray_corner_right
 			left: 100%
+			+media(1000px)
+				left: 110%
+			+media(800px)
+				left: 117%
+			+media(600px)
+				left: 123%
+			+media(400px)
+				left: 140%
+			+media(330px)
+				left: 150%
 		.design_slide.active
 			opacity: 1
 			.section_icon
@@ -56,6 +72,15 @@
 		left: 150%
 		height: 1000px
 		width: 400px
+		+media(1000px)
+			bottom: -980px
+		+media(800px)
+			left: 160%
+			bottom: -1020px
+		+media(750px)
+			left: 180%
+		+media(600px)
+			left: 240%
 		
 	.arrow
 		position: absolute
@@ -79,6 +104,10 @@
 		background-position: 50% 50%
 		background-repeat: no-repeat
 		top: 65%
+		+media(600px)
+			width: 80px
+			height: 80px
+			top: 65.5%
 		i
 			font-size: 22px
 	#arrow_left

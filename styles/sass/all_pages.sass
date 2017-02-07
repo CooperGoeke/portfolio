@@ -29,6 +29,7 @@ html body
 	left: 0
 	z-index: 1
 	position: absolute
+	overflow: hidden
 	&.active_page
 		z-index: 2
 	
@@ -50,6 +51,9 @@ textarea
 	z-index: 99999
 	top: 2rem
 	left: 2rem
+	+media(480px)
+		top: 1.2rem
+		left: 1.2rem
 	
 	img
 		width: 50px
@@ -60,6 +64,8 @@ textarea
 		+transition-delay(.7s)
 		&.active
 			opacity: 1
+		+media(480px)
+			width: 36px
 			
 	h1
 		font-size: 18px
@@ -72,6 +78,10 @@ textarea
 			color: $black
 		&.hidden
 			opacity: 0
+		+media(480px)
+			font-size: 14px
+			top: 14px
+			left: 49px
 		
 		
 		

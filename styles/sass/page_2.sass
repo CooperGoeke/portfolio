@@ -34,8 +34,20 @@
 			+transition-duration(2s)
 	
 	.standard_section
-		top: 20%
+		top: 23%
 		left: 40%
+		+media(1000px)
+			left: 35%
+		+media(900px)
+			left: 20%
+		+media(750px)
+			left: 15%
+		+media(650px)
+			left: 10%
+		+media(600px)
+			top: 25%
+		+media(480px)
+			left: 1.2rem
 	
 	.yellow_corner
 		background-color: $yellow_0
@@ -61,20 +73,40 @@
 			background-position: 60% -100%
 			background-image: url('../../images/cooper.png')
 			background-blend-mode: multiply
+			+media(700px)
+				background-image: none
+		+media(1000px)
+			top: 110%
+			height: 650px
+			width: 650px
+		+media(800px)
+			top: 125%
+			height: 600px
+			width: 600px
+		+media(520px)
+			top: 130%
+			height: 500px
+			width: 500px
+		+media(360px)
+			top: 135%
 			
-			img
-				position: absolute
-				top: -200px
-				left: 50%
-				opacity: .4
-				
-		
 	#yellow_corner_right
 		top: 0
 		left: 200%
 		height: 500px
 		width: 500px
-		
+		+media(1000px)
+			left: 220%
+			top: -100px
+		+media(700px)
+			top: -150px
+			height: 450px
+			width: 450px
+		+media(480px)
+			top: -180px
+		+media(360px)
+			top: -190px
+			
 	#cooper_background
 		position: relative
 		z-index: 0
@@ -89,3 +121,5 @@
 		opacity: 0
 		+transition-property(opacity)
 		+transition-duration(.3s)
+		+media(700px)
+			background-image: none

@@ -8,6 +8,8 @@
 			opacity: 1
 			bottom: 30px
 			+transition-delay(1.6s)
+			+media(500px)
+				bottom: 20px
 	
 	.half
 		+transition-property(left)
@@ -34,16 +36,23 @@
 		
 	#content_wrapper
 		+absoluteCenter
+		top: 45%
 		
 		#logo
 			width: 150px
 			display: block
 			margin: 2rem auto
+			+media(500px)
+				width: 110px
+				margin-bottom: 1.5rem
 		
 		h1
 			font-size: 2rem
 			padding-right: 1.5rem
 			white-space: nowrap
+			+media(500px)
+				font-size: 1.3rem
+				padding-right: 1rem
 		
 	#down_arrow
 		+absoluteCenterX
@@ -62,3 +71,6 @@
 			color: $black
 			+transition-property(top)
 			+transition-duration(.2s)
+		+media(500px)
+			bottom: 50px
+			width: 40px

@@ -16,18 +16,18 @@ $standard_icon_width: 50px
 		+transition-duration(.4s)
 		opacity: 0
 		+transform(rotate(30deg))
+		+media(600px)
+			width: 40px
 		
 		img
 			width: 100%
 			
-		i, span
+		i
 			+absoluteCenter
 			font-size: 1.2rem
 			color: $white
-		span
-			font-size: 1.6rem
-			padding-bottom: 3px
-			padding-right: 1px
+			+media(600px)
+				font-size: .9rem
 		
 	.standard_tree
 		color: $white
@@ -37,6 +37,9 @@ $standard_icon_width: 50px
 		z-index: 1
 		top: 2rem
 		right: 2rem
+		+media(600px)
+			padding-left: 19px
+			padding-top: 20px
 		
 		.standard_tree_inner
 			position: relative
@@ -64,11 +67,15 @@ $standard_icon_width: 50px
 					+clearFloat
 					&.shorter
 						padding-bottom: 20px
+					+media(600px)
+						padding-bottom: 20px
 					
 					.tree_header_line
 						float: left
 						width: 30px
 						height: 19px
+						+media(500px)
+							width: 17px
 						.line_2
 							border-bottom: 1px solid $white
 							width: 0%
@@ -97,6 +104,8 @@ $standard_icon_width: 50px
 						color: $white
 						+transition-property(all)
 						+transition-duration(.3s)
+						+media(600px)
+							font-size: 1.3rem
 					
 		.tree_item
 			margin-top: 10px
@@ -183,6 +192,22 @@ $standard_icon_width: 50px
 				max-width: 500px
 				+transition-property(all)
 				+transition-duration(.3s)
+				+media(1000px)
+					max-width: 450px
+				+media(750px)
+					max-width: 400px
+				+media(600px)
+					max-width: 360px
+				+media(500px)
+					padding-left: 0px
+					max-width: 300px
+					font-size: 13px
+					.mobile_hide
+						display: none
+				+media(360px)
+					max-width: 230px
+					font-size: 12.5px
+							
 				a
 					font-style: italic
 					color: $white

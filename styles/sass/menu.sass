@@ -15,6 +15,9 @@ $menu_icon_width: 50px
 	padding-top: 2rem
 	z-index: 9999
 	height: 100vh
+	+media(480px)
+		padding-right: 1.2rem
+		padding-top: 1.2rem
 	
 	#menu_icon
 		width: $menu_icon_width
@@ -22,10 +25,14 @@ $menu_icon_width: 50px
 		position: relative
 		z-index: 2
 		float: right
+		+media(480px)
+			width: 40px
 		
 		#icon_wrapper
 			width: 100%
 			height: 50px
+			+media(480px)
+				height: 44px
 			
 			img
 				position: absolute
@@ -53,6 +60,8 @@ $menu_icon_width: 50px
 				opacity: 1
 				+transform(rotate(0deg))
 				position: relative
+				+media(480px)
+					width: 16px
 			#bar_1
 				top: 0
 				&.rotate
@@ -78,6 +87,10 @@ $menu_icon_width: 50px
 		z-index: 1
 		top: 2rem
 		right: 2rem
+		+media(480px)
+			top: 1.2rem
+			right: 1.2rem
+			padding-right: 20px
 		
 		#menu_tree_inner
 			position: relative
@@ -190,6 +203,41 @@ $menu_icon_width: 50px
 					+transform(scale(1))
 				&.current_page
 					opacity: 1
+				&#page_1_link_hex
+					&.current_page
+						background: #224cc5
+						&:before
+							border-bottom-color: #224cc5
+						&:after 
+							border-top-color: #224cc5
+				&#page_2_link_hex
+					&.current_page
+						background: #1E917A
+						&:before
+							border-bottom-color: #1E917A
+						&:after 
+							border-top-color: #1E917A
+				&#page_3_link_hex
+					&.current_page
+						background: #224cc5
+						&:before
+							border-bottom-color: #224cc5
+						&:after 
+							border-top-color: #224cc5
+				&#page_4_link_hex
+					&.current_page
+						background: #806CD4
+						&:before
+							border-bottom-color: #806CD4
+						&:after 
+							border-top-color: #806CD4
+				&#page_5_link_hex
+					&.current_page
+						background: #00AE73
+						&:before
+							border-bottom-color: #00AE73
+						&:after 
+							border-top-color: #00AE73
 						
 			h3
 				font-size: .85rem
@@ -205,6 +253,25 @@ $menu_icon_width: 50px
 					+transition-duration(.8s)
 					padding-right: 25px
 					opacity: 1
+				&.current_page
+					cursor: default
+					&:hover
+						text-decoration: none
+				&#page_1_link
+					&.current_page
+						color: #224cc5
+				&#page_2_link
+					&.current_page
+						color: #1E917A
+				&#page_3_link
+					&.current_page
+						color: #224cc5
+				&#page_4_link
+					&.current_page
+						color: #806CD4
+				&#page_5_link
+					&.current_page
+						color: #00AE73
 					
 				span
 					font-weight: 300

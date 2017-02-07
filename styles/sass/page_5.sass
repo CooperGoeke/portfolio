@@ -7,8 +7,10 @@
 			top: 0%
 		#down_arrow
 			opacity: 1
-			bottom: 2rem
+			bottom: 30px
 			+transition-delay(1.4s)
+			+media(500px)
+				bottom: 15px
 		.section_icon
 			+transform(rotate(0deg))
 			opacity: 1
@@ -38,6 +40,8 @@
 		position: absolute
 		top: 0
 		overflow: hidden
+		+media(1000px)
+			width: 100%
 	
 	#left_half
 		background: $green_1
@@ -50,6 +54,8 @@
 		left: 50%
 		top: -100%
 		+transition-delay(.3s)
+		+media(1000px)
+			display: none
 		
 	#content_wrapper
 		width: 100%
@@ -61,7 +67,7 @@
 		
 	#down_arrow
 		+absoluteCenterX
-		bottom: 1rem
+		bottom: 10px
 		width: 50px
 		cursor: pointer
 		opacity: 0
@@ -77,3 +83,5 @@
 			+transition-property(top)
 			+transition-duration(.2s)
 			top: 45%
+		+media(500px)
+			width: 40px

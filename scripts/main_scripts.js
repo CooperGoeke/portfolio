@@ -64,6 +64,8 @@ function jumpToPage( page_number ){
 		$("#menu_icon #icon_1").addClass("active");
 		$('.side_circle').removeClass("active");
 		$('#side_circle_1').addClass("active");
+		$('.menu_item .hexagon, .menu_item h3').removeClass("current_page");
+		$('#page_1_link_hex, #page_1_link').addClass("current_page");
 		openPage(1);
 	}else if( page_number == 2 ){
 		$("body").css("background-color", "#38c2a6");
@@ -72,6 +74,8 @@ function jumpToPage( page_number ){
 		$("#menu_icon #icon_2, #header_logo_wrapper #header_logo_2").addClass("active");
 		$('.side_circle').removeClass("active");
 		$('#side_circle_2').addClass("active");
+		$('.menu_item .hexagon, .menu_item h3').removeClass("current_page");
+		$('#page_2_link_hex, #page_2_link').addClass("current_page");
 		openPage(2);
 	}else if( page_number == 3 ){
 		$("body").css("background-color", page_3_color);
@@ -80,6 +84,8 @@ function jumpToPage( page_number ){
 		$("#menu_icon #icon_3, #header_logo_wrapper #header_logo_3").addClass("active");
 		$('.side_circle').removeClass("active");
 		$('#side_circle_3').addClass("active");
+		$('.menu_item .hexagon, .menu_item h3').removeClass("current_page");
+		$('#page_3_link_hex, #page_3_link').addClass("current_page");
 		openPage(3);
 	}else if( page_number == 4 ){
 		$("body").css("background-color", "#9e8fdd");
@@ -88,6 +94,8 @@ function jumpToPage( page_number ){
 		$("#menu_icon #icon_4, #header_logo_wrapper #header_logo_4").addClass("active");
 		$('.side_circle').removeClass("active");
 		$('#side_circle_4').addClass("active");
+		$('.menu_item .hexagon, .menu_item h3').removeClass("current_page");
+		$('#page_4_link_hex, #page_4_link').addClass("current_page");
 		openPage(4);
 	}else if( page_number == 5 ){
 		$("body").css("background-color", "#4b816f");
@@ -96,6 +104,8 @@ function jumpToPage( page_number ){
 		$("#menu_icon #icon_5, #header_logo_wrapper #header_logo_5").addClass("active");
 		$('.side_circle').removeClass("active");
 		$('#side_circle_5').addClass("active");
+		$('.menu_item .hexagon, .menu_item h3').removeClass("current_page");
+		$('#page_5_link_hex, #page_5_link').addClass("current_page");
 		openPage(5);
 	}
 }
@@ -234,8 +244,38 @@ $(document).keydown(function(e) {
 		default: return;
 	}
 });
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+var xDown = null;                                                        
+var yDown = null;                                                        
+function handleTouchStart(evt) {                                         
+    xDown = evt.touches[0].clientX;                                      
+    yDown = evt.touches[0].clientY;                                      
+};                                                
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+    if ( Math.abs( xDiff ) < Math.abs( yDiff ) ) {
+		if(lock) return;
+        if ( yDiff > 0 ) {
+            /* up swipe */
+			scrollDown();
+        } else { 
+            /* down swipe */
+			scrollUp();
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 
 $(function(){
 	jumpToPage(2);
-	//changeWebRight();
+	changeWebRight();
 });
