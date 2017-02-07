@@ -1,0 +1,172 @@
+#page_4
+	display: block
+	&.active_page
+		#gray_corner_left
+			left: 0
+		#gray_corner_right
+			left: 100%
+		.design_slide.active
+			opacity: 1
+			.section_icon
+				+transform(rotate(0deg))
+				opacity: 1
+			.line_1
+				height: 100%
+				+transition-delay(.3s)
+			.line_2
+				width: 100%
+				+transition-delay(.6s)
+			.tree_header_circle
+				opacity: 1
+				+transition-delay(.8s)
+			.standard_tree h2
+				left: 5px
+				opacity: 1
+				+transition-duration(.6s)
+				+transition-delay(.8s)
+			.hexagon
+				+transform(scale(1))
+			.featured_logo
+				opacity: 1 !important
+			.iframe
+				opacity: 1 !important
+			p
+				left: 15px
+				opacity: 1
+				+transition-duration(.6s)
+				+transition-delay(1s)
+	
+	.gray_corner
+		background-color: $gray_0
+		position: absolute
+		+transform(translate(-50%, -50%) rotate(60deg))
+		+transition-property(left)
+		+transition-duration(1s)
+		z-index: 2
+		
+	#gray_corner_left
+		top: -120px
+		left: -600px
+		height: 650px
+		width: 650px
+		overflow: hidden
+	
+	#gray_corner_right
+		bottom: -940px
+		left: 150%
+		height: 1000px
+		width: 400px
+		
+	.arrow
+		position: absolute
+		+transform(translate(-50%, -50%))
+		left: 0
+		top: 50%
+		&:hover
+			cursor: pointer
+		i
+			position: absolute
+			opacity: 1
+			left: 50%
+			top: 50%
+			+transform(translate(-50%, -50%) rotate(-60deg))
+			+transition(opacity 0.2s ease)
+	#arrow_right
+		width: 90px
+		height: 90px
+		background: url($image_path + "hex_8.svg")
+		background-size: cover
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		top: 65%
+		i
+			font-size: 22px
+	#arrow_left
+		width: 50px
+		height: 50px
+		background: url($image_path + "hex_9.svg")
+		background-size: cover
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		top: 71%
+		i
+			font-size: 12px
+	
+	.design_slide
+		opacity: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		+transition(opacity 0.8s 0.3s ease)
+	
+	#design_slide_1
+		.standard_section
+			+absoluteCenter
+			top: 47%
+			left: 47%
+	
+	#design_slide_2
+		.standard_section
+			z-index: 100
+			h2, p
+				color: $black
+		#composite_video_wrapper
+			width: 100%
+			height: 100vh
+			overflow: hidden
+			position: relative
+			video
+				+absoluteCenter
+				z-index: 1
+				min-height: 100vh
+				min-width: 100%
+				width: auto
+				height: auto
+				object-fit: cover
+			
+		
+	#design_slide_3
+		background: url($image_path + "design_background_3.jpg")
+		background-size: cover
+		background-position: 50% 50%
+		bacground-repeat: no-repeat
+		.standard_section
+			h2, p
+				color: $black
+		
+		.featured_logo
+			+absoluteCenter
+			opacity: 0
+			+transition(opacity 0.8s 0.3s ease)
+			width: 200px
+		#vr_logo
+			top: 40%
+		#newsreel_logo
+			left: 60%
+		#theta_tau_logo
+			top: 60%
+			width: 160px
+		#pic_pouch_logo
+			left: 40%
+			
+	#design_slide_4
+		background: url($image_path + "design_background_4.jpg")
+		background-size: cover
+		background-position: 50% 50%
+		bacground-repeat: no-repeat
+	
+	#design_slide_2, #design_slide_3, #design_slide_4, #design_slide_5
+		.standard_section
+			position: absolute
+			bottom: 5%
+			left: 5%
+		iframe
+			+absoluteCenter
+			opacity: 0
+			+transition(opacity 0.8s 0.3s ease)
+			
+		
+			
+
+		
+		

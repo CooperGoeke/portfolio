@@ -1,0 +1,77 @@
+@import 'mixins'
+
+@font-face
+	font-family: 'IconFont'
+	src: url('../../fonts/dripicons-v2.woff') format('woff'), url('./fonts/dripicons-v2.ttf') format('truetype')
+
+.icon
+	font-family: 'IconFont', Fallback, sans-serif
+	color: $white
+	font-size: 20px
+
+*
+	box-sizing: border-box
+	
+html body
+	width: 100%
+	height: 100vh
+	font-family: $main_font
+	font-weight: $main_font_weight
+	color: $white
+	overflow: hidden
+	background: $blue_0
+	+transition(background 1s 0.5s ease)
+	
+.page
+	height: 100vh
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 1
+	position: absolute
+	&.active_page
+		z-index: 2
+	
+h1, h2, h3
+	text-transform: uppercase
+	font-weight: 600
+	
+	span
+		font-weight: 200
+		
+input[type="text"]
+	+standardInput
+	
+textarea
+	+standardInput
+	
+#header_logo_wrapper
+	position: fixed
+	z-index: 99999
+	top: 2rem
+	left: 2rem
+	
+	img
+		width: 50px
+		position: absolute
+		opacity: 0
+		+transition-property(opacity)
+		+transition-duration(1s)
+		+transition-delay(.7s)
+		&.active
+			opacity: 1
+			
+	h1
+		font-size: 18px
+		position: absolute
+		top: 20px
+		left: 70px
+		color: $white
+		+transition(color 0.3s ease, opacity 1s .7s ease)
+		&.active
+			color: $black
+		&.hidden
+			opacity: 0
+		
+		
+		

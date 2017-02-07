@@ -1,0 +1,225 @@
+#menu_white_background
+	height: 100vh
+	width: 100%
+	background: rgba(255,255,255, .95)
+	display: none
+	position: absolute
+	z-index: 99
+
+$menu_icon_width: 50px
+#menu
+	position: fixed
+	top: 0
+	right: 0
+	padding-right: 2rem
+	padding-top: 2rem
+	z-index: 9999
+	height: 100vh
+	
+	#menu_icon
+		width: $menu_icon_width
+		cursor: pointer
+		position: relative
+		z-index: 2
+		float: right
+		
+		#icon_wrapper
+			width: 100%
+			height: 50px
+			
+			img
+				position: absolute
+				width: 100%
+				opacity: 0
+				z-index: 1
+				+transition-property(opacity)
+				+transition-duration(1s)
+				+transition-delay(.7s)
+				&.active
+					opacity: 1
+					z-index: 2
+		
+		.menu_bar_wrapper
+			+absoluteCenter
+			z-index: 3
+			
+			.menu_bar
+				height: 2px
+				width: 20px
+				margin-bottom: 3px
+				background: $white
+				+transition-property(all)
+				+transition-duration(.3s)
+				opacity: 1
+				+transform(rotate(0deg))
+				position: relative
+			#bar_1
+				top: 0
+				&.rotate
+					+transform(rotate(45deg))
+					top: 5px
+			#bar_2
+				+transition-duration(.2s)
+				&.rotate
+					opacity: 0
+			#bar_3
+				bottom: 0
+				&.rotate
+					+transform(rotate(-45deg))
+					bottom: 5px	
+	
+	#menu_tree
+		color: $black
+		text-align: right
+		padding-top: 5px
+		padding-right: $menu_icon_width / 2
+		height: 100%
+		position: fixed
+		z-index: 1
+		top: 2rem
+		right: 2rem
+		
+		#menu_tree_inner
+			position: relative
+			
+			.line_1
+				width: 100%
+				position: absolute
+				border-right: 1px solid $gray
+				height: 0%
+				+transition-property(height)
+				+transition-duration(.2s)
+				+transition-delay(0s)
+				&.active
+					height: 100%
+			
+			#menu_tree_inner_2
+				padding-top: 90px
+				right: 0
+				
+				#menu_header_wrapper
+					padding-bottom: 60px
+					+clearFloat
+					
+					#menu_header_line
+						float: right
+						width: 40px
+						height: 19px
+						.line_2
+							border-bottom: 1px solid $gray
+							width: 0%
+							height: 100%
+							float: right
+							+transition-property(width)
+							+transition-duration(.2s)
+							+transition-delay(0s)
+							&.active
+								+transition-delay(.2s)
+								width: 100%
+						
+					#menu_header_circle
+						float: right
+						background: $gray
+						width: 3px
+						height: 3px
+						+border-radius(50%)
+						margin-top: 17px
+						opacity: 0
+						+transition-property(opacity)
+						+transition-duration(.3s)
+						+transition-delay(0s)
+						&.active
+							+transition-delay(.4s)
+							opacity: 1
+					
+					h2
+						font-size: 1.5rem
+						float: right
+						position: relative
+						right: -10px
+						opacity: 0
+						+transition-property(all)
+						+transition-duration(.3s)
+						+transition-delay(0s)
+						&.active
+							+transition-delay(.3s)
+							+transition-duration(.8s)
+							right: 5px
+							opacity: 1
+					
+		.menu_item
+			margin-top: 10px
+			&:nth-child(2)
+				.hexagon.active, .item_line_after .line_3.active
+					+transition-delay(.1s)
+				h3.active
+					+transition-delay(.3s)
+			&:nth-child(3)
+				.hexagon.active, .item_line_after .line_3.active
+					+transition-delay(.2s)
+				h3.active
+					+transition-delay(.4s)
+			&:nth-child(4) 
+				.hexagon.active, .item_line_after .line_3.active
+					+transition-delay(.3s)
+				h3.active
+					+transition-delay(.5s)
+			&:nth-child(5)
+				.hexagon.active, .item_line_after .line_3.active
+					+transition-delay(.4s)
+				h3.active
+					+transition-delay(.6s)
+			&:nth-child(6)
+				.hexagon.active
+					+transition-delay(.5s)
+				h3.active
+					+transition-delay(.7s)
+		
+			.hexagon
+				+hexagon($black)
+				float: right
+				right: -4px
+				+transform(scale(0))
+				+transition-property(transform)
+				+transition-duration(.4s)
+				+transition-timing-function(ease)
+				+transition-delay(0s)
+				opacity: .3
+				&.active
+					+transition-timing-function(cubic-bezier(.29,2.69,.61,1.09))
+					+transform(scale(1))
+				&.current_page
+					opacity: 1
+						
+			h3
+				font-size: .85rem
+				padding-right: 0px
+				opacity: 0
+				+transition-property(all)
+				+transition-duration(.3s)
+				+transition-delay(0s)
+				cursor: pointer
+				&:hover
+					text-decoration: underline
+				&.active
+					+transition-duration(.8s)
+					padding-right: 25px
+					opacity: 1
+					
+				span
+					font-weight: 300
+					opacity: .8
+			
+			.item_line_after
+				display: block
+				height: 40px
+				margin-top: 8px
+				.line_3
+					width: 100%
+					height: 0%
+					border-right: 1px solid $gray
+					+transition-property(height)
+					+transition-duration(.2s)
+					+transition-delay(0s)
+					&.active
+						height: 100%

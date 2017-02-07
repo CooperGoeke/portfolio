@@ -1,0 +1,173 @@
+@import "compass/css3/transform"
+@import "compass/css3/transition"
+@import "compass/css3/box-shadow"
+@import "compass/css3/border-radius"
+@import "compass/css3/background-size"
+
+$image_path: "../../images/"
+
+$main_font: 'Raleway', sans-serif
+$main_font_weight: 400
+
+$black: #000000
+$white: #ffffff
+$gray: #888888
+$gray_0: #333333
+$blue_0: #0a236b
+$blue_1: #224cc5
+$blue_2: #4374ff
+$blue_3: #6589f0
+$blue_4: #d0dcff
+$green_0: #38c2a6
+$green_1: #00ae73
+$brown_0: #615e56
+$yellow_0: #e3e494
+$purple_0: #806cd4
+
+
+$web_bg_1: #4774c5
+$web_bg_2: #604c4c
+$web_bg_3: #631b1d
+$web_bg_4: #0e87ac
+
+//MEDIA QUERIES
+=media($size)
+	@media (max-width: $size)
+		@content
+
+=clearFloat
+	&:after
+		content: ''
+		display: block
+		clear: both
+
+=absoluteCenter
+	position: absolute
+	left: 50%
+	top: 50%
+	+transform(translate(-50%, -50%))
+	
+=absoluteCenterX
+	position: absolute
+	left: 50%
+	+transform(translate(-50%, 0%))
+	
+=absoluteCenterY
+	position: absolute
+	top: 50%
+	+transform(translate(0%, -50%))
+	
+=standardButton
+	cursor: pointer
+	outline: none
+	border: none
+	+border-radius(4px)
+	font-family: $main_font
+	font-weight: $main_font_weight
+	background-color: $brand_orange
+	color: $white
+	padding: .8rem
+	font-size: 1.2rem
+	+transition-property(width)
+	+transition-duration(2s)
+	+transition-timing-function(ease)
+	text-decoration: none
+	position: relative
+	+box-shadow( darken($brand_orange, 20%) -2px 2px 2px 1px )
+	&:hover
+		background: lighten($brand_orange, 8%)
+	&:active
+		+box-shadow( darken($brand_orange, 20%) -2px 2px 2px 1px )
+		top: 1px
+		right: 1px
+	i
+		margin-right: 1rem
+		font-size: 1.1rem
+	
+=standardInput
+	font-family: $main_font
+	font-weight: $main_font_weight
+	outline: none
+	border: none
+	border-bottom: 2px solid $white
+	padding: 5px
+	font-size: .9rem
+	color: $white
+	background: none
+	min-width: 250px
+		
+=hexagon($bg_color)
+	position: relative
+	width: 10px 
+	height: 6.5px
+	background-color: $bg_color
+	margin: 2.89px 0
+	text-align: left
+	&:before, &:after 
+		content: ""
+		position: absolute
+		width: 0
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+	&:before
+		bottom: 100%
+		border-bottom: 2.89px solid $bg_color
+	&:after
+		top: 100%
+		width: 0
+		border-top: 2.89px solid $bg_color
+
+=hexagon_2($bg_color)
+	position: relative
+	width: 90px
+	height: 52px
+	background-color: $bg_color
+	margin: 25.98px 0
+	box-shadow: 0px 10px 0px -4px $bg_color
+	&:hover
+		background-color: lighten($bg_color, 8%)
+		&:before
+			border-bottom: 25.98px solid lighten($bg_color, 8%)
+		&:after
+			border-top: 25.98px solid lighten($bg_color, 8%)
+	&:before, &:after 
+		content: ""
+		position: absolute
+		width: 0
+		border-left: 45px solid transparent
+		border-right: 45px solid transparent
+	&:before
+		bottom: 100%
+		border-bottom: 25.98px solid $bg_color
+	&:after
+		top: 100%
+		width: 0
+		border-top: 25.98px solid $bg_color
+
+=hexagon_3($bg_color)
+	position: relative
+	width: 50px
+	height: 29px
+	background-color: $bg_color
+	margin: 14.43px 0
+	box-shadow: 0px 5px 0px -4px $bg_color
+	&:hover
+		background-color: lighten($bg_color, 15%)
+		&:before
+			border-bottom: 14.43px solid lighten($bg_color, 15%)
+		&:after
+			border-top: 14.43px solid lighten($bg_color, 15%)
+	&:before, &:after 
+		content: ""
+		position: absolute
+		width: 0
+		border-left: 25px solid transparent
+		border-right: 25px solid transparent
+	&:before
+		bottom: 100%
+		border-bottom: 14.43px solid $bg_color
+	&:after
+		top: 100%
+		width: 0
+		border-top: 14.43px solid $bg_color
+	

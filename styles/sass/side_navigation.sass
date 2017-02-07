@@ -1,0 +1,26 @@
+#side_navigation
+	position: fixed
+	z-index: 99999
+	top: 50%
+	right: 2rem
+	+transform(translate(0%, -50%))
+	width: 50px
+	&.behind
+		z-index: 9998
+	
+	.side_circle
+		background: $white
+		opacity: .4
+		height: 5px
+		width: 5px
+		+border-radius(50%)
+		margin: 0px auto 20px auto
+		+transition(width 0.2s ease)
+		&:hover
+			cursor: pointer
+		&:last-child
+			margin-bottom: 0
+		&.active
+			width: 12px
+			height: 12px
+			opacity: .8

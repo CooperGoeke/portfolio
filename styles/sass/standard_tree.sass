@@ -1,0 +1,282 @@
+
+$standard_icon_width: 50px
+
+.standard_section
+	position: absolute
+	z-index: 10
+	
+	.section_icon
+		width: $menu_icon_width
+		cursor: pointer
+		position: relative
+		left: 1px
+		z-index: 2
+		float: left
+		+transition-property(all)
+		+transition-duration(.4s)
+		opacity: 0
+		+transform(rotate(30deg))
+		
+		img
+			width: 100%
+			
+		i, span
+			+absoluteCenter
+			font-size: 1.2rem
+			color: $white
+		span
+			font-size: 1.6rem
+			padding-bottom: 3px
+			padding-right: 1px
+		
+	.standard_tree
+		color: $white
+		text-align: left
+		padding-top: 45px
+		padding-left: $menu_icon_width / 2
+		z-index: 1
+		top: 2rem
+		right: 2rem
+		
+		.standard_tree_inner
+			position: relative
+			&.second
+				margin-top: 3px
+				.standard_tree_inner_2 .standard_tree_header
+					padding-top: 60px
+					h2
+						font-size: 1.3rem
+			
+			.line_1
+				width: 100%
+				position: absolute
+				border-left: 2px solid $white
+				height: 0%
+				+transition-property(height)
+				+transition-duration(.4s)
+			
+			.standard_tree_inner_2
+				padding-top: 30px
+				right: 0
+				
+				.standard_tree_header
+					padding-bottom: 60px
+					+clearFloat
+					&.shorter
+						padding-bottom: 20px
+					
+					.tree_header_line
+						float: left
+						width: 30px
+						height: 19px
+						.line_2
+							border-bottom: 1px solid $white
+							width: 0%
+							height: 100%
+							float: left
+							+transition-property(width)
+							+transition-duration(.2s)
+						
+					.tree_header_circle
+						float: left
+						background: $white
+						width: 3px
+						height: 3px
+						+border-radius(50%)
+						margin-top: 17px
+						opacity: 0
+						+transition-property(opacity)
+						+transition-duration(.3s)
+					
+					h2
+						font-size: 1.6rem
+						float: left
+						position: relative
+						left: -10px
+						opacity: 0
+						color: $white
+						+transition-property(all)
+						+transition-duration(.3s)
+					
+		.tree_item
+			margin-top: 10px
+			padding-bottom: 21px
+			&.page_5_item
+				padding-bottom: 0px
+				.info_block
+					margin-left: 40px
+					position: relative
+					min-width: 200px
+					min-height: 8px
+					input, textarea
+						position: absolute
+						top: -10px
+					h3
+						font-weight: 500
+						margin: 0
+						padding: 0
+						position: absolute
+						top: -27px
+					hr
+						border: none
+						border-bottom: 1px solid $white
+						height: 1px
+						margin: 0
+						width: 30px
+						background: none
+						display: block
+						padding-top: 6px
+					p
+						float: none
+						padding: 0
+						margin: 0
+						position: absolute
+						top: 20px
+						opacity: 1
+						color: #a6e3ce
+						a
+							color: #a6e3ce
+							&:hover
+								color: $white
+								
+			
+			.hexagon
+				+hexagon($white)
+				float: left
+				left: -4px
+				+transform(scale(0))
+				+transition-property(transform)
+				+transition-duration(.4s)
+				+transition-timing-function(ease)
+				
+			.section_item_icon
+				width: 34px
+				cursor: pointer
+				position: relative
+				left: -16px
+				z-index: 2
+				float: left
+				+transform(scale(0))
+				+transition-property(transform)
+				+transition-duration(.4s)
+				+transition-timing-function(ease)
+				
+				img
+					width: 100%
+					
+				span
+					+absoluteCenter
+					font-size: 1.3rem
+					color: $white
+					padding-bottom: 6px
+				
+			p
+				position: relative
+				float: left
+				font-size: .9rem
+				line-height: 1.5
+				padding-left: 13px
+				left: 0
+				top: -5px
+				opacity: 0
+				color: $white
+				max-width: 500px
+				+transition-property(all)
+				+transition-duration(.3s)
+				a
+					font-style: italic
+					color: $white
+					opacity: .7
+					&:hover
+						opacity: 1
+				
+			h4
+				position: relative
+				float: left
+				font-size: .9rem
+				line-height: 1.5
+				margin-top: 6px
+				text-decoration: underline
+				cursor: pointer
+				left: 0
+				color: $white
+				max-width: 500px
+				+transition-property(all)
+				+transition-duration(.3s)
+			
+			.item_line_after
+				display: block
+				height: 50px
+				position: relative
+				top: 21px
+				&.short
+					height: 10px
+					margin-top: 10px
+				.line_3
+					width: 100%
+					height: 100%
+					border-left: 2px solid $white
+					+transition-property(height)
+					+transition-duration(.5s)
+					+transition-delay(0s)
+			.item_line_after
+				display: block
+				height: 50px
+				position: relative
+				top: 21px
+				&.short
+					height: 10px
+					margin-top: 10px
+				.line_3
+					width: 100%
+					height: 100%
+					border-left: 2px solid $white
+					+transition-property(height)
+					+transition-duration(.5s)
+					+transition-delay(0s)
+			.item_line_after_fixed_height
+				display: block
+				height: 43px
+				margin-top: 14px
+				&.longer
+					height: 80px
+				.line_3
+					width: 100%
+					height: 100%
+					border-left: 2px solid $white
+					+transition-property(height)
+					+transition-duration(.2s)
+					+transition-delay(0s)
+					&.active
+						height: 100%
+
+.page.active_page
+	.stanard_section .standard_tree .tree_item .hexagon
+		+transition-timing-function(cubic-bezier(.29,2.69,.61,1.09))
+						
+	.tree_item
+		&:nth-child(2)
+			.hexagon, .item_line_after .line_3
+				+transition-delay(.6s)
+			h3
+				+transition-delay(.5s)
+		&:nth-child(3)
+			.hexagon, .item_line_after .line_3
+				+transition-delay(.7s)
+			h3
+				+transition-delay(.6s)
+		&:nth-child(4) 
+			.hexagon, .item_line_after .line_3
+				+transition-delay(.8s)
+			h3
+				+transition-delay(.7s)
+		&:nth-child(5)
+			.hexagon, .item_line_after .line_3
+				+transition-delay(.9s)
+			h3
+				+transition-delay(.8s)
+		&:nth-child(6)
+			.hexagon
+				+transition-delay(1s)
+			h3
+				+transition-delay(.9s)
