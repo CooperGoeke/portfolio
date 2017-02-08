@@ -4,7 +4,7 @@ $standard_icon_width: 50px
 .standard_section
 	position: absolute
 	z-index: 10
-	
+					
 	.section_icon
 		width: $menu_icon_width
 		cursor: pointer
@@ -18,7 +18,11 @@ $standard_icon_width: 50px
 		+transform(rotate(30deg))
 		+media(600px)
 			width: 40px
-		
+		+media(400px)
+			width: 30px
+			&.page_5_special
+				width: 40px
+			
 		img
 			width: 100%
 			
@@ -28,6 +32,12 @@ $standard_icon_width: 50px
 			color: $white
 			+media(600px)
 				font-size: .9rem
+				&.page_5_special
+					font-size: 1rem
+			+media(400px)
+				font-size: .8rem
+				&.page_5_special
+					font-size: 1rem
 		
 	.standard_tree
 		color: $white
@@ -40,6 +50,12 @@ $standard_icon_width: 50px
 		+media(600px)
 			padding-left: 19px
 			padding-top: 20px
+		+media(400px)
+			padding-left: 15px
+			padding-top: 10px
+			&.page_5_special
+				padding-left: 19px
+				padding-top: 20px
 		
 		.standard_tree_inner
 			position: relative
@@ -57,6 +73,10 @@ $standard_icon_width: 50px
 				height: 0%
 				+transition-property(height)
 				+transition-duration(.4s)
+				+media(400px)
+					border-left: 1px solid $white
+					&.page_5_special
+						border-left: 2px solid $white
 			
 			.standard_tree_inner_2
 				padding-top: 30px
@@ -69,6 +89,8 @@ $standard_icon_width: 50px
 						padding-bottom: 20px
 					+media(600px)
 						padding-bottom: 20px
+						&.page_5_special
+							padding-bottom: 50px
 					
 					.tree_header_line
 						float: left
@@ -106,6 +128,10 @@ $standard_icon_width: 50px
 						+transition-duration(.3s)
 						+media(600px)
 							font-size: 1.3rem
+						+media(400px)
+							font-size: 1rem
+							&.page_5_special
+								font-size: 1.3rem
 					
 		.tree_item
 			margin-top: 10px
@@ -192,6 +218,8 @@ $standard_icon_width: 50px
 				max-width: 500px
 				+transition-property(all)
 				+transition-duration(.3s)
+				+media(1050px)
+					max-width: 480px
 				+media(1000px)
 					max-width: 450px
 				+media(750px)

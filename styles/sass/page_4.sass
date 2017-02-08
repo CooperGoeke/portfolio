@@ -81,6 +81,7 @@
 			left: 180%
 		+media(600px)
 			left: 240%
+			bottom: -1030px
 		
 	.arrow
 		position: absolute
@@ -130,9 +131,19 @@
 	
 	#design_slide_1
 		.standard_section
-			+absoluteCenter
+			+absoluteCenterY
 			top: 47%
 			left: 47%
+			+media(900px)
+				left: 20%
+			+media(800px)
+				left: 18%
+			+media(750px)
+				left: 15%
+			+media(650px)
+				left: 10%
+			+media(480px)
+				left: 1.2rem
 	
 	#design_slide_2
 		.standard_section
@@ -187,8 +198,18 @@
 	#design_slide_2, #design_slide_3, #design_slide_4, #design_slide_5
 		.standard_section
 			position: absolute
-			bottom: 5%
+			bottom: 8%
 			left: 5%
+			+media(700px)
+				bottom: 15%
+				left: 10%
+			+media(500px)
+				bottom: 22%
+				left: 6%
+			+media(400px)
+				bottom: 22%
+				left: 4%
+				bottom: 20%
 		iframe
 			+absoluteCenter
 			opacity: 0

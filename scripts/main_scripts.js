@@ -146,7 +146,7 @@ function changeWebPreview( slide_number ){
 		//urbanHive
 		$(".web_slide").removeClass("active");
 		$("#web_slide_3").addClass("active");
-		page_3_color = "#fbde02";
+		page_3_color = "#12a26d";
 		$("body").css("background-color", page_3_color);
 		$(".web_slide .shadow_box").css("background-color", page_3_color);
 	}else if( slide_number == 4 ){
@@ -277,5 +277,5 @@ function handleTouchMove(evt) {
 
 $(function(){
 	jumpToPage(3);
-	//changeWebRight();
+	changeWebRight();
 });
