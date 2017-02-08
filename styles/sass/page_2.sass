@@ -71,15 +71,19 @@
 			background-repeat: no-repeat
 			background-color: $yellow_0
 			background-position: 60% -100%
+			background-size: 50% auto
 			background-image: url('../../images/cooper.png')
 			background-blend-mode: multiply
-			+media(700px)
+			+media(1000px)
+				background-position: 50% -100%
+				background-size: 50% auto
+			+media(800px)
 				background-image: none
 		+media(1000px)
 			top: 110%
 			height: 650px
 			width: 650px
-		+media(800px)
+		+media(900px)
 			top: 125%
 			height: 600px
 			width: 600px
@@ -112,8 +116,6 @@
 		z-index: 0
 		height: 100%
 		width: 100%
-		background-position: 100px 100px
-		background-size: 25% auto
 		background-repeat: no-repeat
 		background-color: $green_0
 		background-image: url('../../images/cooper.png')
@@ -121,5 +123,13 @@
 		opacity: 0
 		+transition-property(opacity)
 		+transition-duration(.3s)
-		+media(700px)
+		background-position: 100px 100px
+		background-size: 25% auto
+		+media(1000px)
+			background-position: 20px 100px
+			background-size: 30% auto
+		+media(900px)
+			background-position: 60px 200px
+			background-size: 25% auto
+		+media(800px)
 			background-image: none

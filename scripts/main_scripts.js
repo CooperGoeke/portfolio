@@ -3,7 +3,7 @@ var menu_open = false;
 var lock = false;
 var menu_lock = false;
 var max_pages = 5;
-var page_3_color = "#4774c5";
+var page_3_color = "#e5557e";
 var page_3_slide = 1;
 var page_3_max = 6;
 var page_4_slide = 1;
@@ -132,7 +132,7 @@ function changeWebPreview( slide_number ){
 	if( slide_number == 1){
 		$(".web_slide").removeClass("active");
 		$("#web_slide_1").addClass("active");
-		page_3_color = "#f0af3e";
+		page_3_color = "#e5557e";
 		$("body").css("background-color", page_3_color);
 		$(".web_slide .shadow_box").css("background-color", page_3_color);
 	}else if( slide_number == 2 ){
@@ -276,6 +276,6 @@ function handleTouchMove(evt) {
 };
 
 $(function(){
-	jumpToPage(2);
-	changeWebRight();
+	jumpToPage(3);
+	//changeWebRight();
 });

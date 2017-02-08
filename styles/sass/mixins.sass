@@ -34,7 +34,13 @@ $web_bg_4: #0e87ac
 =media($size)
 	@media (max-width: $size)
 		@content
-
+=mediaH($size)
+	@media (max-height: $size)
+		@content
+=mediaR($size)
+	@media (min-aspect-ratio: $size)
+		@content
+		
 =clearFloat
 	&:after
 		content: ''
