@@ -51,6 +51,8 @@ textarea
 	z-index: 99999
 	top: 2rem
 	left: 2rem
+	&.loading
+		display: none
 	+media(480px)
 		top: 1.2rem
 		left: 1.2rem
@@ -83,5 +85,6 @@ textarea
 			top: 14px
 			left: 49px
 		
-		
+#loading_screen
+	+absoluteCenter
 		

@@ -276,6 +276,10 @@ function handleTouchMove(evt) {
 };
 
 $(function(){
-	jumpToPage(3);
-	changeWebRight();
+	$('body').imagesLoaded( { background: true }, function() {
+		$('#loading_screen').fadeOut(400, function(){
+			$('#header_logo_wrapper, #side_navigation, #menu').removeClass("loading");
+		});
+		jumpToPage(3);
+	});
 });

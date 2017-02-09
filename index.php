@@ -17,6 +17,7 @@
 		
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 		<script src="./scripts/main_scripts.js"></script>
 		
 		<!--Favicon-->
@@ -31,12 +32,16 @@
 		
 	</head>
 	<body>
-		<div id="header_logo_wrapper">
+		<div id="header_logo_wrapper" class="loading">
 			<img id="header_logo_2" class="header_logo" src="./images/header_logo_2.svg">
 			<img id="header_logo_3" class="header_logo" src="./images/header_logo_3.svg">
 			<img id="header_logo_4" class="header_logo" src="./images/header_logo_4.svg">
 			<img id="header_logo_5" class="header_logo" src="./images/header_logo_5.svg">
 			<h1 class="hidden">Cooper<span>Goeke</span></h1>
+		</div>
+		<div id="loading_screen">
+			<!--<img src="./images/loader.gif" alt="">-->
+			<p>Loading...</p>
 		</div>
 		<?php require('./html_partials/menu.html'); ?>
 		<?php require('./html_partials/side_navigation.html'); ?>
