@@ -42,7 +42,7 @@
 						<div class="info_block">
 							<h3 class="thin">Résumé</h3>
 							<hr>
-							<p><a href="#">Download</a></p>
+							<p><a href="CooperGoekeResume.pdf" target="_blank" download>Download</a></p>
 						</div>
 					</div>
 				</div>
@@ -51,53 +51,55 @@
 	</div>
 	<div id="right_half" class="half">
 		<div id="content_wrapper">
-			<div class="standard_section">
-				<div class="section_icon">
-					<img src="./images/hex_5.svg" alt="">
-					<i class="icon" aria-hidden="true">&#xe03f;</i>
-				</div>
-				<div class="standard_tree">
-					<div class="standard_tree_inner">
-						<div class="line_1"></div>
-						<div class="standard_tree_inner_2">
-							<div class="standard_tree_header">
-								<div class="tree_header_line">
-									<div class="line_2"></div>
+			<form id="email_form" method="POST" action="">
+				<div class="standard_section">
+					<div class="section_icon">
+						<img src="./images/hex_5.svg" alt="">
+						<i class="icon" aria-hidden="true">&#xe03f;</i>
+					</div>
+					<div class="standard_tree">
+						<div class="standard_tree_inner">
+							<div class="line_1"></div>
+							<div class="standard_tree_inner_2">
+								<div class="standard_tree_header">
+									<div class="tree_header_line">
+										<div class="line_2"></div>
+									</div>
+									<div class="tree_header_circle"></div>
+									<h2>Email<span>Me</span></h2>
 								</div>
-								<div class="tree_header_circle"></div>
-								<h2>Email<span>Me</span></h2>
+							</div>
+						</div>
+						<div class="tree_item page_5_item">
+							<div class="hexagon"></div>
+							<div class="info_block">
+								<input name ="name" type="text" placeholder="Name" autocomplete="off" value="">
+							</div>
+							<div class="item_line_after_fixed_height"><div class="line_3"></div></div>
+						</div>
+						<div class="tree_item page_5_item">
+							<div class="hexagon"></div>
+							<div class="info_block">
+								<input name ="email" type="text" placeholder="Email" autocomplete="off" value="">
+							</div>
+							<div class="item_line_after_fixed_height"><div class="line_3"></div></div>
+						</div>
+						<div class="tree_item page_5_item">
+							<div class="hexagon"></div>
+							<div class="info_block">
+								<textarea name="message" value="" placeholder="Message" autocomplete="off"></textarea>
+							</div>
+							<div class="item_line_after_fixed_height"><div class="line_3"></div></div>
+						</div>
+						<div class="tree_item page_5_item">
+							<div class="hexagon"></div>
+							<div class="info_block" id="form_submit_button_wrapper">
+								<input id="form_submit_button" type="submit" value="Send">
 							</div>
 						</div>
 					</div>
-					<div class="tree_item page_5_item">
-						<div class="hexagon"></div>
-						<div class="info_block">
-							<input name ="name" type="text" placeholder="Name" autocomplete="off" value="">
-						</div>
-						<div class="item_line_after_fixed_height"><div class="line_3"></div></div>
-					</div>
-					<div class="tree_item page_5_item">
-						<div class="hexagon"></div>
-						<div class="info_block">
-							<input name ="email" type="text" placeholder="Email" autocomplete="off" value="">
-						</div>
-						<div class="item_line_after_fixed_height"><div class="line_3"></div></div>
-					</div>
-					<div class="tree_item page_5_item">
-						<div class="hexagon"></div>
-						<div class="info_block">
-							<input name ="subject" type="text" placeholder="Subject" autocomplete="off" value="">
-						</div>
-						<div class="item_line_after_fixed_height"><div class="line_3"></div></div>
-					</div>
-					<div class="tree_item page_5_item">
-						<div class="hexagon"></div>
-						<div class="info_block">
-							<textarea name="message" value="" placeholder="Message" autocomplete="off"></textarea>
-						</div>
-					</div>
 				</div>
-			</div>
+			</for>
 		</div>
 	</div>
 	<div id="down_arrow" onclick="jumpToPage(1)">

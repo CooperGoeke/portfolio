@@ -17,7 +17,7 @@
 				left: 117%
 			+media(600px)
 				left: 123%
-			+media(400px)
+			+media(440px)
 				left: 140%
 			+media(330px)
 				left: 150%
@@ -44,7 +44,11 @@
 				+transform(scale(1))
 			.featured_logo
 				opacity: 1 !important
-			.iframe
+			iframe
+				opacity: 1 !important
+				z-index: 5 !important
+				pointer-events: auto !important
+			#youtube_image
 				opacity: 1 !important
 			p
 				left: 15px
@@ -133,7 +137,13 @@
 		.standard_section
 			+absoluteCenterY
 			top: 47%
-			left: 47%
+			left: 40%
+			+media(2200px)
+				left: 35%
+			+media(1700px)
+				left: 30%
+			+media(1400px)
+				left: 25%
 			+media(900px)
 				left: 20%
 			+media(800px)
@@ -155,6 +165,11 @@
 			height: 100vh
 			overflow: hidden
 			position: relative
+			+media(800px)
+				background: url($image_path + "design_background_2_small.jpg")
+				background-size: cover
+				background-position: 50% 50%
+				bacground-repeat: no-repeat
 			video
 				+absoluteCenter
 				z-index: 1
@@ -163,7 +178,8 @@
 				width: auto
 				height: auto
 				object-fit: cover
-			
+				+media(800px)
+					display: none
 		
 	#design_slide_3
 		background: url($image_path + "design_background_3.jpg")
@@ -194,6 +210,11 @@
 		background-size: cover
 		background-position: 50% 50%
 		bacground-repeat: no-repeat
+		+media(800px)
+			background: url($image_path + "design_background_4_small.jpg")
+			background-size: cover
+			background-position: 50% 50%
+			bacground-repeat: no-repeat
 	
 	#design_slide_2, #design_slide_3, #design_slide_4, #design_slide_5
 		.standard_section
@@ -210,12 +231,37 @@
 				bottom: 22%
 				left: 4%
 				bottom: 20%
+				
 		iframe
+			z-index: -1
 			+absoluteCenter
 			opacity: 0
 			+transition(opacity 0.8s 0.3s ease)
-			
-		
+			overflow: hidden
+			max-width: 90%
+			top: 45%
+			pointer-events: none
+			+media(700px)
+				top: 40%
+			+media(500px)
+				display: none
+				
+		#youtube_image
+			display: none
+			+absoluteCenter
+			top: 45%
+			opacity: 0
+			cursor: pointer
+			+media(500px)
+				display: block
+				width: 120px
+				top: 40%
+			+media(400px)
+				width: 100px
+				
+			img
+				width: 100%
+				display: block
 			
 
 		

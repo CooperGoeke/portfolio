@@ -40,7 +40,7 @@
 			<h1 class="hidden">Cooper<span>Goeke</span></h1>
 		</div>
 		<div id="loading_screen">
-			<!--<img src="./images/loader.gif" alt="">-->
+			<img src="./images/loader.gif" alt="">
 			<p>Loading...</p>
 		</div>
 		<?php require('./html_partials/menu.html'); ?>

@@ -30,8 +30,10 @@ html body
 	z-index: 1
 	position: absolute
 	overflow: hidden
+	pointer-events: none
 	&.active_page
 		z-index: 2
+		pointer-events: auto
 	
 h1, h2, h3
 	text-transform: uppercase
@@ -87,4 +89,15 @@ textarea
 		
 #loading_screen
 	+absoluteCenter
+	top: 48%
+	img
+		border: none
+		outline: none
+		display: block
+		+media(500px)
+			width: 150px
+	p
+		text-align: center
+		margin-top: 20px
+		opacity: .8
 		

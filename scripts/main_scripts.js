@@ -276,10 +276,25 @@ function handleTouchMove(evt) {
 };
 
 $(function(){
-	$('body').imagesLoaded( { background: true }, function() {
-		$('#loading_screen').fadeOut(400, function(){
-			$('#header_logo_wrapper, #side_navigation, #menu').removeClass("loading");
+	$("#email_form").submit(function(e) {
+		var url = "./libs/email.php";
+		$.ajax({
+			type: "POST",
+			url: url,
+			data: $("#email_form").serialize(),
+			success: function(data){
+				$("#form_submit_button_wrapper").html(data);
+			}
 		});
-		jumpToPage(3);
+		e.preventDefault();
+	});
+	
+	$('body').imagesLoaded( { background: true }, function() {
+		setTimeout(function(){
+			$('#loading_screen').fadeOut(400, function(){
+				$('#header_logo_wrapper, #side_navigation, #menu').removeClass("loading");
+			});
+			jumpToPage(5);
+		}, 1000);
 	});
 });
