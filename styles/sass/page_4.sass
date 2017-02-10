@@ -42,8 +42,6 @@
 				+transition-delay(.8s)
 			.hexagon
 				+transform(scale(1))
-			.featured_logo
-				opacity: 1 !important
 			iframe
 				opacity: 1 !important
 				z-index: 5 !important
@@ -186,24 +184,8 @@
 		background-size: cover
 		background-position: 50% 50%
 		bacground-repeat: no-repeat
-		.standard_section
-			h2, p
-				color: $black
-		
-		.featured_logo
-			+absoluteCenter
-			opacity: 0
-			+transition(opacity 0.8s 0.3s ease)
-			width: 200px
-		#vr_logo
-			top: 40%
-		#newsreel_logo
-			left: 60%
-		#theta_tau_logo
-			top: 60%
-			width: 160px
-		#pic_pouch_logo
-			left: 40%
+		+media(600px)
+			background-position: 45% 50%
 			
 	#design_slide_4
 		background: url($image_path + "design_background_4.jpg")
@@ -258,7 +240,6 @@
 				top: 40%
 			+media(400px)
 				width: 100px
-				
 			img
 				width: 100%
 				display: block

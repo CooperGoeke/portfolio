@@ -9,15 +9,26 @@
 	$mail->Port = 25;
 	$mail->SMTPAuth = false;
 	$mail->SMTPSecure = false;
-
-	$mail->From = 'no-reply@coopergoeke.com';
-	$mail->FromName = "";
+	
+	$mail->From = "no-reply@coopergoeke.com";
+	$name = "No Name Given";
+	if($_POST["name"]){
+		$name = $_POST["name"];
+	}
+	$mail->FromName = $name;
 	$mail->addAddress('coopergoeke@gmail.com', 'Cooper');
 	$mail->isHTML(true);
-
-	// The following is self explanatory
-	$mail->Subject = "";
-	$mail->Body    = "Name: <br>Subject: <br>Message: ";
+	
+	$message = "No Name Given";
+	if($_POST["name"]){
+		$message = $_POST["message"];
+	}
+	$email = "No Email Given";
+	if($_POST["email"]){
+		$email = $_POST["email"];
+	}
+	$mail->Subject = "An email from your portfolio";
+	$mail->Body    = "Name: {$name}<br>Email: {$email}<br>Message: {$message}";
 	$mail->AltBody = "Something went wrong, so you aren't seeing the whole message :(";
 
 	if(!$mail->send()) {  
