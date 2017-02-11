@@ -23,7 +23,9 @@
 			
 		.web_slide
 			+transition(opacity .8s 0.3s ease)
+			z-index: -1
 			&.active
+				z-index: 1
 				opacity: 1
 				.section_icon
 					+transform(rotate(0deg))
@@ -80,7 +82,7 @@
 			left: 180%
 		+media(600px)
 			left: 240%
-			bottom: -1030px
+			bottom: -1020px
 		
 	.arrow
 		position: absolute

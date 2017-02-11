@@ -6,8 +6,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<title>Cooper Goeke</title>
+		<title>Cooper Goeke - a web developer & designer.</title>
+		<meta name="description" content="The portfolio of Cooper Goeke, a web developer based in Cincinnati, Ohio.">
+		<meta name="keywords" content="cooper, goeke, portfolio, website, developer, designer, programmer">
+		<meta name="author" content="Cooper Goeke">
 		
 		<!-- Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Raleway:600,400,500,300,200,400italic' rel='stylesheet' type='text/css'>
@@ -30,6 +32,13 @@
 		<meta name="msapplication-config" content="/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#4374ff">
 		
+		<!-- Facebook -->
+		<meta property="fb:app_id"			content="1302524843118765" />
+		<meta property="og:url"				content="http://coopergoeke.com/" />
+		<meta property="og:title"			content="Cooper Goeke - a web developer & designer." />
+		<meta property="og:description"		content="The portfolio of Cooper Goeke, a web developer based in Cincinnati, Ohio." />
+		<meta property="og:image"			content="http://coopergoeke.com/images/CooperGoeke.jpg" />
+
 	</head>
 	<body>
 		<div id="header_logo_wrapper" class="loading">

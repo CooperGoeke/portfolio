@@ -307,7 +307,7 @@ $(function(){
 			$('#loading_screen').fadeOut(400, function(){
 				$('#header_logo_wrapper, #side_navigation, #menu').removeClass("loading");
 			});
-			jumpToPage(3);
+			jumpToPage(1);
 		}, 1000);
 	});
 });

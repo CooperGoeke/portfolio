@@ -13,7 +13,7 @@
 	$mail->From = "no-reply@coopergoeke.com";
 	$name = "No Name Given";
 	if($_POST["name"]){
-		$name = $_POST["name"];
+		$name = strip_tags($_POST["name"]);
 	}
 	$mail->FromName = $name;
 	$mail->addAddress('coopergoeke@gmail.com', 'Cooper');
@@ -21,11 +21,11 @@
 	
 	$message = "No Name Given";
 	if($_POST["name"]){
-		$message = $_POST["message"];
+		$message = strip_tags($_POST["message"]);
 	}
 	$email = "No Email Given";
 	if($_POST["email"]){
-		$email = $_POST["email"];
+		$email = strip_tags($_POST["email"]);
 	}
 	$mail->Subject = "An email from your portfolio";
 	$mail->Body    = "Name: {$name}<br>Email: {$email}<br>Message: {$message}";
